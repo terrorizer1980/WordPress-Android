@@ -45,7 +45,6 @@
     <string name="share_intent_screen_title">Pick site</string>
     <string name="edit_photo_screen_title">Edit Photo</string>
     <string name="notif_detail_screen_title">Notification detail %s</string>
-    <string name="just_testing_a_pr">testing a pr, ignore!</string>
 
     <!-- general strings -->
     <string name="posts">Posts</string>
