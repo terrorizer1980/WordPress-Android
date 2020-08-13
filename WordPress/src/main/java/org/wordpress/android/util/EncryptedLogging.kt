@@ -19,6 +19,7 @@ import java.util.UUID
 import javax.inject.Inject
 import javax.inject.Named
 import javax.inject.Singleton
+import com.goterl.lazycode.lazysodium.interfaces.SecretStream.State
 
 @Singleton
 class EncryptedLogging @Inject constructor(
@@ -34,10 +35,11 @@ class EncryptedLogging @Inject constructor(
     }
 
     fun start() {
+        val state = State.ByReference()
         dispatcher.dispatch(EncryptedLogActionBuilder.newResetUploadStatesAction())
         if (networkUtilsWrapper.isNetworkAvailable()) {
             coroutineScope.launch {
-                encryptedLogStore.uploadQueuedEncryptedLogs()
+                //encryptedLogStore.uploadQueuedEncryptedLogs()
             }
         }
     }
